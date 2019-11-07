@@ -55,3 +55,13 @@ public class HSMClient {
 	
 }
 ```
+
+### Some tools commands used
+```
+Generate keypair on the HSM:
+pkcs11-tool (--module path to the opensc-pkcs11.dll library(for Windows)) -l --pin 648219 --keypairgen --key-type rsa:2048 --id 10 --label test_label
+
+Export public key from the HSM:
+pkcs15-tool --read-public-key keyid -o publickey.pem
+
+```
